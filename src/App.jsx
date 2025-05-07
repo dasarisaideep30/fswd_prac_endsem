@@ -18,10 +18,12 @@ export default function App() {
   const deleteNote = (i) => setNotes(notes.filter((_, idx) => idx !== i));
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>My Notes</h2>
-      <NoteForm note={note} setNote={setNote} saveNote={saveNote} />
-      <NoteList notes={notes} editNote={editNote} deleteNote={deleteNote} />
+    <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
+      <div style={{ width: "400px" }}>
+        <h2>My Notes</h2>
+        <NoteForm note={note} setNote={setNote} saveNote={saveNote} />
+        <NoteList notes={notes} editNote={editNote} deleteNote={deleteNote} />
+      </div>
     </div>
-  );
+  );  
 }
